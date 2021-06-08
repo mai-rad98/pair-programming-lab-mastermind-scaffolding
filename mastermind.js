@@ -10,33 +10,25 @@
  *                     numbers in the incorrect position for the guess
  *
  * @example
+ * checkGuess('1532, '1234')
  * // returns '2-1'
  * // two numbers in the correct place (1 and 3)
  * // and one correct number in the incorrect place (2)
- * checkGuess('1532, '1234')
  *
  */ function checkGuess(guess, solution) {
   // first determine how many characters total the two strings have in common
   // This may help:
   // https://github.com/bonnie/udemy-ENZYME/blob/master/context-base/src/helpers/index.js
-  const solutionLetters = solution.split("");
-  const guessSet = new Set(guess);
-  const totalMatchCount = solutionLetters.filter((letter) =>
-    guessSet.has(letter)
-  ).length;
-
+  //
   // then determine how many of those characters are in the right place
-  // hint: iterate through characters of guess and compare to character in the same position in solution
-  let positionMatchCount = 0;
-  for (i = 0; i < guess.length; i++) {
-    if (guess[i] === solution[i]) {
-      positionMatchCount += 1;
-    }
-  }
-
+  // hint: iterate through characters of guess and compare to character
+  // in the same position in solution
+  //
   // finally, return a string in the format
-  // "count of correct characters in the right place"-"count of correct characters not in the right place"
-  return `${positionMatchCount}-${totalMatchCount - positionMatchCount}`;
+  // "count of correct characters in the right place"-"count of correct
+  // characters not in the right place"
+  // for example, "2-1"
+  //
 }
 
 // https://jsdoc.app
