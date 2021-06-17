@@ -1,3 +1,4 @@
+// https://jsdoc.app
 /**
  * @function checkGuess
  * Checks guess for "mastermind" game against solution
@@ -15,7 +16,9 @@
  * // two numbers in the correct place (1 and 3)
  * // and one correct number in the incorrect place (2)
  *
- */ function checkGuess(guess, solution) {
+ */
+function checkGuess(guess, solution) {
+  // TODO: complete this function
   // first determine how many characters total the two strings have in common
   // This may help:
   // https://github.com/bonnie/udemy-ENZYME/blob/master/context-base/src/helpers/index.js
